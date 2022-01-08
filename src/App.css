@@ -14,6 +14,14 @@
 main {
   background-color: var(--grey);
   height: 100vh;
+  color: white;
+  font-family: montserrat;
+  font-weight: regular;
+}
+
+h2 {
+  font-family: poppins;
+  font-weight: regular;
 }
 
 .nav-bar {
@@ -28,8 +36,6 @@ main {
 .nav-bar li a {
   text-decoration: none;
   color: white;
-  font-family: montserrat;
-  font-weight: regular;
 }
 .nav-bar .navigation {
   display: flex;
@@ -58,6 +64,109 @@ main {
   justify-content: center;
   align-items: center;
   font-size: 24px;
+}
+
+header {
+  height: 90.6vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+header .personal-info {
+  margin-top: 150px;
+  margin-right: 100px;
+}
+header .personal-info .name-color {
+  color: var(--green);
+}
+header .personal-info .typed-text {
+  color: white;
+  font-family: montserrat;
+  font-weight: regular;
+  font-size: 38px;
+}
+header .personal-info h1 {
+  font-family: poppins;
+  font-weight: medium;
+  font-size: 54px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  letter-spacing: 0.6px;
+}
+header .personal-info .main-buttons {
+  display: flex;
+  width: 370px;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+header .personal-info .main-buttons a {
+  text-decoration: none;
+  font-weight: 600;
+}
+header .personal-info .main-buttons .primary-button {
+  width: 180px;
+  height: 54px;
+  background-color: var(--green);
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+header .personal-info .main-buttons .secondary-button {
+  width: 180px;
+  height: 54px;
+  background-color: white;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--green);
+}
+header .portrait img {
+  width: 650px;
+  margin-right: 20px;
+  filter: contrast(1.1);
+}
+header .main-info {
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  width: 1500px;
+}
+header .background-shapes {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+header .background-shapes #circle-1, header .background-shapes #circle-2, header .background-shapes #circle-3 {
+  position: relative;
+  background-color: var(--dark-grey);
+  border-radius: 100%;
+}
+header .background-shapes #circle-1 {
+  width: 250px;
+  height: 250px;
+  top: 600px;
+  left: -121px;
+}
+header .background-shapes #circle-2 {
+  width: 100px;
+  height: 100px;
+  left: 103px;
+  top: -100px;
+}
+header .background-shapes #circle-3 {
+  width: 70px;
+  height: 70px;
+  left: 1730px;
+  top: 517px;
+}
+header .background-shapes img {
+  position: relative;
+  left: 900px;
+  top: -370px;
 }
 
 /*# sourceMappingURL=App.css.map */
