@@ -19,14 +19,26 @@ main
 
 h2 
     font-family: poppins 
-    font-weight: regular
+    font-weight: 400
+    font-size: 38px
+    margin-bottom: 50px
+
+h3 
+    font-family: poppins
+    font-weight: 300 
+    letter-spacing: 0.8px
 
 //****************************Navigation bar styling*****************************************
 .nav-bar
+    z-index: 5
     display: flex
     justify-content: space-between
-    width: 1477px
-    margin: 0 auto
+    width: 100%
+    padding-left: 300px
+    padding-right: 300px
+    position: fixed
+    background-color: var(--grey)
+    top: 0px
 
     li
         list-style: none
@@ -62,10 +74,12 @@ h2
 
 //*************************Header Styling*******************************************
 header
-    height: 90.6vh 
+    height: 90.1vh 
     display: flex
     align-items: flex-end
     justify-content: center
+    margin-top: 100px
+    
     .personal-info
         margin-top: 150px
         margin-right: 100px
@@ -160,6 +174,99 @@ header
             position: relative
             left: 900px
             top: -370px
-            
+
+//****************************About Me Styling*******************************************
+.about-me-background
+    background-color: var(--dark-grey)   
+    height: 100vh  
+    display: flex 
+    align-items: center 
+    justify-content: center
+
+.categories
+   
+    height: 630px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    margin-right: 300px
+    .category-card
+        width: 500px
+        height: 200px  
+        border-radius: 7px
+        background-color: var(--grey)  
+        padding: 40px
+
+        .title
+            display: flex
+            width: 100%
+            justify-content: space-between
+            margin-bottom: 30px
+
+        p 
+            font-size: 15px
+            letter-spacing: 0.5px
+            line-height: 23px
+
+.introduction
+    div
+        width: 43px 
+        height: 20px 
+        background-color: var(--green)
+        display: flex 
+        justify-content: center
+        align-items: center
+        border-radius: 3px
+
+        small 
+            font-size: 10px
+
+    h4 
+        color: var(--green)
+        font-weight: 100
+        margin-bottom: 15px
+        margin-top: 25px
+
+    p 
+        font-weight: 100
+        letter-spacing: 0.5px
+        line-height: 23px
+        width: 500px
+        font-size: 14px
+
+.about-me-background-circles
+    position: absolute 
+    width: 100%
+    height: 100vh
+
+    #circle-4, #circle-5, #circle-6, #circle-7
+        position: relative
+        background-color: var(--grey)
+        border-radius: 100%
+
+    #circle-4
+        width: 70px
+        height: 70px
+        left: 1630px
+        top: 840px
+
+    #circle-5
+        width: 100px
+        height: 100px
+        left: 1730px
+        top: 140px
+
+    #circle-6
+        width: 50px
+        height: 50px
+        left: 930px
+        top: 610px
+
+    #circle-7
+        width: 80px
+        height: 80px
+        left: 30px
+        top: 0px
+
         
  
