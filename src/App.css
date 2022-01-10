@@ -466,4 +466,27 @@ a {
   z-index: 3;
 }
 
+.contact-section {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color: var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-section h2 {
+  letter-spacing: 0.6px;
+}
+.contact-section div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: var(--green);
+  border-radius: 6px;
+  width: 130px;
+  height: 50px;
+  font-weight: 600;
+}
+
 /*# sourceMappingURL=App.css.map */
