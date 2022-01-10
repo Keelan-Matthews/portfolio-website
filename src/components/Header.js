@@ -1,7 +1,10 @@
-import React from 'react'
-import Typed from 'react-typed'
-import Portrait from '../media/images/portrait.png'
-import SkillWheel from '../media/svg/skill-wheel.svg'
+import React from 'react';
+import Typed from 'react-typed';
+import Portrait from '../media/images/portrait.png';
+import SkillWheel from '../media/svg/skill-wheel.svg';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMouse } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 export const Header = () => {
     return (
@@ -31,6 +34,10 @@ export const Header = () => {
                 <div id="circle-2"></div>
                 <div id="circle-3"></div>
                 <img src={ SkillWheel } id="skill-wheel" />
+            </div>
+            <div className="mouse-scroll">
+                <FontAwesomeIcon icon={ faMouse } style={{ width: "24px", height: "24px" }} />
+                <FontAwesomeIcon icon={ faAngleDown } style={{ width: "24px", height: "24px", marginBottom: "10px" }} />
             </div>
         </header>
     )

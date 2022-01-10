@@ -3,6 +3,7 @@
 :root
     --grey: #2D2E32
     --dark-grey: #25262A
+    --darkest-grey: #1F2024
     --green: #47D2A0
 
 *
@@ -175,6 +176,11 @@ header
             left: 900px
             top: -370px
 
+    .mouse-scroll
+        display: flex
+        flex-direction: column
+        position: absolute
+
 //****************************About Me Styling*******************************************
 .about-me-background
     background-color: var(--dark-grey)   
@@ -204,9 +210,10 @@ header
             margin-bottom: 30px
 
         p 
-            font-size: 15px
+            font-size: 14px
             letter-spacing: 0.5px
             line-height: 23px
+            font-weight: 400
 
 .introduction
     div
@@ -223,12 +230,12 @@ header
 
     h4 
         color: var(--green)
-        font-weight: 100
+        font-weight: 400
         margin-bottom: 15px
         margin-top: 25px
 
     p 
-        font-weight: 100
+        font-weight: 400
         letter-spacing: 0.5px
         line-height: 23px
         width: 500px
@@ -268,5 +275,73 @@ header
         left: 30px
         top: 0px
 
-        
- 
+//******************************Skills Styling***************************************  
+.skills-section
+    min-height: 500px
+    background-color: var(--darkest-grey)
+    display: flex 
+    flex-direction: column
+    align-items: center
+    padding-top: 100px
+    padding-bottom: 190px
+
+.heading
+    width: 80vw
+    display: flex
+    flex-direction: column
+    justify-content: center
+    z-index: 2
+
+    div
+        width: 43px 
+        height: 20px 
+        background-color: var(--green)
+        display: flex 
+        justify-content: center
+        align-items: center
+        border-radius: 3px
+
+        small 
+            font-size: 10px
+
+    h2 
+        width: 100px
+        height: 60px
+        background-color: var(--darkest-grey)
+
+.skill-container
+    z-index: 2
+    width: 80vw
+    display: flex 
+    justify-content: center
+    flex-wrap: wrap
+
+.skill-card-container
+    display: flex 
+    flex-direction: column 
+    justify-content: space-between
+    align-items: center 
+    padding: 40px
+    background-color: var(--dark-grey)
+    border-radius: 10px
+    width: 170px
+    margin: 8px
+
+    img 
+        width: 80px
+        margin-bottom: 30px
+
+    p 
+        text-align: center
+
+.background
+    position: absolute 
+
+    .green-circle-skills
+        position: relative 
+        left: -700px
+        top: 50px
+        width: 220px 
+        height: 220px 
+        border: 3px solid var(--green)
+        border-radius: 100%
