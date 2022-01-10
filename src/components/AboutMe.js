@@ -6,7 +6,7 @@ import { faTerminal } from "@fortawesome/free-solid-svg-icons";
 
 export const AboutMe = () => {
     return (
-        <section className="about-me-background">
+        <section className="about-me-background" id="about-me-nav">
             <div className="categories">
                 <div className="category-card">
                     <div className="title">
@@ -47,12 +47,12 @@ export const AboutMe = () => {
                     To design and develop websites and applications that reflect the personality and motives of prospective clients.
                 </p>
             </div>
-            <div className="about-me-background-circles">
+            {/* <div className="about-me-background-circles">
                 <div id="circle-4"></div>
                 <div id="circle-5"></div>
                 <div id="circle-6"></div>
                 <div id="circle-7"></div>
-            </div>
+            </div> */}
         </section>
     )
 }

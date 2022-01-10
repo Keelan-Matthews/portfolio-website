@@ -51,6 +51,9 @@ h3 {
   text-decoration: none;
   color: white;
 }
+.nav-bar li a:hover {
+  color: var(--green);
+}
 .nav-bar .navigation {
   display: flex;
   width: 400px;
@@ -99,6 +102,7 @@ header .personal-info .typed-text {
   font-family: montserrat;
   font-weight: regular;
   font-size: 38px;
+  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.74);
 }
 header .personal-info h1 {
   font-family: poppins;
@@ -107,6 +111,7 @@ header .personal-info h1 {
   margin-top: 10px;
   margin-bottom: 10px;
   letter-spacing: 0.6px;
+  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.74);
 }
 header .personal-info .main-buttons {
   display: flex;
@@ -127,6 +132,7 @@ header .personal-info .main-buttons .primary-button {
   justify-content: center;
   align-items: center;
   color: white;
+  box-shadow: 1px -1px 20px 0px rgba(0, 0, 0, 0.54);
 }
 header .personal-info .main-buttons .secondary-button {
   width: 180px;
@@ -137,11 +143,13 @@ header .personal-info .main-buttons .secondary-button {
   justify-content: center;
   align-items: center;
   color: var(--green);
+  box-shadow: 1px -1px 20px 0px rgba(0, 0, 0, 0.54);
 }
 header .portrait img {
-  width: 650px;
+  width: 580px;
   margin-right: 20px;
   filter: contrast(1.1);
+  filter: drop-shadow(0px 2px 30px #00000096);
 }
 header .main-info {
   z-index: 2;
@@ -188,7 +196,18 @@ header .mouse-scroll {
   flex-direction: column;
   position: absolute;
 }
+header .mouse-scroll #mouse-arrow {
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate-reverse both;
+}
 
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(7px);
+  }
+}
 .about-me-background {
   background-color: var(--dark-grey);
   height: 100vh;
@@ -210,6 +229,8 @@ header .mouse-scroll {
   border-radius: 7px;
   background-color: var(--grey);
   padding: 40px;
+  box-shadow: 1px -1px 20px 0px rgba(0, 0, 0, 0.24);
+  transition: transform 0.2s ease;
 }
 .categories .category-card .title {
   display: flex;
@@ -222,6 +243,12 @@ header .mouse-scroll {
   letter-spacing: 0.5px;
   line-height: 23px;
   font-weight: 400;
+}
+.categories .category-card:hover {
+  transform: scale(1.04);
+}
+.categories .category-card:hover .title {
+  color: var(--green);
 }
 
 .introduction div {
@@ -294,12 +321,19 @@ header .mouse-scroll {
   padding-top: 100px;
   padding-bottom: 190px;
 }
+.skills-section .skills-wrapper {
+  max-width: 80vw;
+}
+.skills-section .skills-wrapper .heading-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
 
 .heading {
   max-width: 80vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   z-index: 2;
 }
 .heading div {
@@ -338,6 +372,8 @@ header .mouse-scroll {
   border-radius: 10px;
   width: 170px;
   margin: 8px;
+  box-shadow: 1px -1px 20px 0px rgba(0, 0, 0, 0.24);
+  transition: transform 0.2s ease;
 }
 .skill-card-container img {
   width: 80px;
@@ -345,6 +381,9 @@ header .mouse-scroll {
 }
 .skill-card-container p {
   text-align: center;
+}
+.skill-card-container:hover {
+  transform: scale(1.03);
 }
 
 .background {
@@ -410,6 +449,11 @@ header .mouse-scroll {
   padding: 10px;
   margin: 20px;
   border-radius: 10px;
+  box-shadow: 1px -1px 30px 0px rgba(0, 0, 0, 0.24);
+  transition: transform 0.3s ease;
+}
+.project-card-container:hover {
+  transform: scale(1.006);
 }
 .project-card-container img {
   max-width: 450px;
@@ -487,6 +531,45 @@ a {
   width: 130px;
   height: 50px;
   font-weight: 600;
+  box-shadow: 1px -1px 20px 0px rgba(0, 0, 0, 0.54);
+}
+.contact-section div:hover {
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) infinite alternate both;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.footer-section {
+  height: 300px;
+  background-color: var(--grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+.footer-section .footer-details {
+  display: flex;
+  flex-direction: column;
+  margin-right: 70px;
+}
+.footer-section .footer-details .detail {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.footer-section .footer-details .detail a {
+  color: white;
+}
+.footer-section .footer-socials a {
+  color: white;
 }
 
 /*# sourceMappingURL=App.css.map */

@@ -11,25 +11,29 @@ import FigmaLogo from '../media/svg/figma-logo.svg';
 
 export const Skills = () => {
     return (
-        <section className="skills-section">
-            <div className="heading">
-                <div>
-                    <small>Top</small>
+        <section className="skills-section" id="skills-nav">
+            <div className="skills-wrapper">
+                <div className="heading-wrapper">
+                    <div className="heading">
+                        <div>
+                            <small>Top</small>
+                        </div>
+                        <h2>Skills</h2>
+                    </div>
                 </div>
-                <h2>Skills</h2>
-            </div>
-            <div className="skill-container">
-                <SkillCard vector={ HtmlCss } alt="HTML and CSS logo" name="HTML/CSS" />
-                <SkillCard vector={ SassLogo } alt="Sass logo" name="SASS" />
-                <SkillCard vector={ jsLogo } alt="JavaScript logo" name="JavaScript" />
-                <SkillCard vector={ C } alt="C++ logo" name="C++" />
-                <SkillCard vector={ aiLogo } alt="Adobe Illustrator logo" name="Adobe Illustrator" />
-                <SkillCard vector={ psLogo } alt="Adobe Photoshop logo" name="Adobe Photoshop" />
-                <SkillCard vector={ FigmaLogo } alt="Figma logo" name="Figma" />
-                <SkillCard vector={ Blender } alt="Blender logo" name="Blender" />
-            </div>
-            <div className="background">
-                <div className="green-circle-skills"></div>
+                <div className="skill-container">
+                    <SkillCard vector={ HtmlCss } alt="HTML and CSS logo" name="HTML/CSS" />
+                    <SkillCard vector={ SassLogo } alt="Sass logo" name="SASS" />
+                    <SkillCard vector={ jsLogo } alt="JavaScript logo" name="JavaScript" />
+                    <SkillCard vector={ C } alt="C++ logo" name="C++" />
+                    <SkillCard vector={ aiLogo } alt="Adobe Illustrator logo" name="Adobe Illustrator" />
+                    <SkillCard vector={ psLogo } alt="Adobe Photoshop logo" name="Adobe Photoshop" />
+                    <SkillCard vector={ FigmaLogo } alt="Figma logo" name="Figma" />
+                    <SkillCard vector={ Blender } alt="Blender logo" name="Blender" />
+                </div>
+                <div className="background">
+                    <div className="green-circle-skills"></div>
+                </div>
             </div>
         </section>
     )

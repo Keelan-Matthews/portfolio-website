@@ -47,6 +47,9 @@ h3
             text-decoration: none
             color: white
 
+            &:hover 
+                color: var(--green)
+
     .navigation
         display: flex
         width: 400px
@@ -92,6 +95,7 @@ header
             font-family: montserrat
             font-weight: regular
             font-size: 38px
+            text-shadow: 3px 3px 20px rgba(0,0,0,0.74)
 
         h1
             font-family: poppins
@@ -100,6 +104,7 @@ header
             margin-top: 10px 
             margin-bottom: 10px
             letter-spacing: 0.6px
+            text-shadow: 3px 3px 20px rgba(0,0,0,0.74)
 
         .main-buttons
             display: flex
@@ -120,6 +125,7 @@ header
                     justify-content: center
                     align-items: center
                     color: white
+                    box-shadow: 1px -1px 20px 0px rgba(0,0,0,0.54)
 
             .secondary-button
                     width: 180px
@@ -130,12 +136,14 @@ header
                     justify-content: center
                     align-items: center
                     color: var(--green)
+                    box-shadow: 1px -1px 20px 0px rgba(0,0,0,0.54)
 
     .portrait
         img
-            width: 650px
+            width: 580px
             margin-right: 20px
             filter: contrast(1.1)
+            filter: drop-shadow(0px 2px 30px #00000096)
 
     .main-info
         z-index: 2
@@ -181,6 +189,17 @@ header
         flex-direction: column
         position: absolute
 
+        #mouse-arrow
+            animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate-reverse both
+
+@keyframes slide-top 
+    0% 
+        transform: translateY(0)
+  
+    100% 
+        transform: translateY(7px)
+
+
 //****************************About Me Styling*******************************************
 .about-me-background
     background-color: var(--dark-grey)   
@@ -202,6 +221,8 @@ header
         border-radius: 7px
         background-color: var(--grey)  
         padding: 40px
+        box-shadow: 1px -1px 20px 0px rgba(0,0,0,0.24)
+        transition: transform 0.2s ease
 
         .title
             display: flex
@@ -214,6 +235,13 @@ header
             letter-spacing: 0.5px
             line-height: 23px
             font-weight: 400
+
+        &:hover
+            .title
+                color: var(--green)
+
+            transform: scale(1.04)
+
 
 .introduction
     div
@@ -285,11 +313,18 @@ header
     padding-top: 100px
     padding-bottom: 190px
 
+    .skills-wrapper
+        max-width: 80vw
+
+        .heading-wrapper
+            display: flex
+            justify-content: flex-start
+            width: 100%
+
 .heading
     max-width: 80vw
     display: flex
     flex-direction: column
-    justify-content: center
     z-index: 2
 
     div
@@ -326,6 +361,8 @@ header
     border-radius: 10px
     width: 170px
     margin: 8px
+    box-shadow: 1px -1px 20px 0px rgba(0,0,0,0.24)
+    transition: transform 0.2s ease
 
     img 
         width: 80px
@@ -333,6 +370,9 @@ header
 
     p 
         text-align: center
+
+    &:hover
+        transform: scale(1.03)
 
 .background
     position: absolute 
@@ -397,6 +437,11 @@ header
     padding: 10px
     margin: 20px
     border-radius: 10px
+    box-shadow: 1px -1px 30px 0px rgba(0,0,0,0.24)
+    transition: transform 0.3s ease
+
+    &:hover
+        transform: scale(1.006)
 
     img
         max-width: 450px
@@ -449,7 +494,7 @@ a
 .align-left
     z-index: 3
 
-//*****************************Contact section***************************************
+//*****************************Contact Styling***************************************
 .contact-section
     padding-top: 200px 
     padding-bottom: 200px
@@ -471,3 +516,44 @@ a
         width: 130px
         height: 50px
         font-weight: 600
+        box-shadow: 1px -1px 20px 0px rgba(0,0,0,0.54)
+
+        &:hover
+            animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate both
+
+    @keyframes scale-up-center 
+        0% 
+            transform: scale(1)
+        
+        100% 
+            transform: scale(1.1)
+
+//********************************Footer Styling****************************************
+.footer-section
+    height: 300px
+    background-color: var(--grey)
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 18px
+    font-weight: 400
+
+    .footer-details
+        display: flex
+        flex-direction: column
+        margin-right: 70px
+
+        .detail
+            display: flex
+            margin-top: 10px
+            margin-bottom: 10px
+            align-items: center
+
+            a
+                color: white
+
+    .footer-socials
+        a 
+            color: white
+
+            

@@ -5,7 +5,7 @@ import BursaryBuffetMockup from '../media/images/bursary-buffet-mockup.png';
 
 export const Projects = () => {
     return (
-        <section className="projects-section">
+        <section className="projects-section" id="projects-nav">
             <div className="align-left">
                 <div className="heading">
                     <div>
@@ -18,7 +18,7 @@ export const Projects = () => {
                     <ProjectCard image={ BursaryBuffetMockup } name="Bursary Buffet" alt="Image showing a mockup of the Bursary Buffet website" info="Bursary Buffet is a non-profit organization that aims to make applying for bursaries a simple process. I was required to design and help develop the fron-end of the website." link="#" cta="Figma Link" className="project-card" />
                 </div>
             </div>
-            <div className="background">
+            {/* <div className="background">
                 <div className="green-circle-projects"></div>
                 <div id="circle-8"></div>
                 <div id="circle-9"></div>
@@ -26,7 +26,7 @@ export const Projects = () => {
                 <div id="circle-11"></div>
                 <div id="circle-12"></div>
                 <div id="circle-13"></div>
-            </div>
+            </div> */}
         </section>
     )
 }

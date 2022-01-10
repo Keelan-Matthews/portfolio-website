@@ -7,7 +7,7 @@ export const ProjectCard = (props) => {
             <div className="project-info">
                 <h3>{ props.name }</h3>
                 <p>{ props.info }</p>
-                <a href={ props.link }>
+                <a href={ props.link } target="_blank">
                     <div className="project-link"><p>{ props.cta }</p></div>
                 </a>
             </div>

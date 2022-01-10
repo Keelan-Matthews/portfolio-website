@@ -21,23 +21,23 @@ export const Header = () => {
                         loop
                     />
                     <div className="main-buttons">
-                        <a href="#" className="primary-button"><div>Download CV</div></a>
-                        <a href="#" className="secondary-button"><div>Contact Me</div></a>
+                        <a href="#" target="_blank" className="primary-button"><div>Download CV</div></a>
+                        <a href="mailto:keelanmatthews123@gmail.com" target="_blank" className="secondary-button"><div>Contact Me</div></a>
                     </div>
                 </div>
                 <div className="portrait">
                     <img src={ Portrait } alt="This image is a self-portrait"  />
                 </div>
             </div>
-            <div className="background-shapes">
+            {/* <div className="background-shapes">
                 <div id="circle-1"></div>
                 <div id="circle-2"></div>
                 <div id="circle-3"></div>
                 <img src={ SkillWheel } id="skill-wheel" />
-            </div>
+            </div> */}
             <div className="mouse-scroll">
                 <FontAwesomeIcon icon={ faMouse } style={{ width: "24px", height: "24px" }} />
-                <FontAwesomeIcon icon={ faAngleDown } style={{ width: "24px", height: "24px", marginBottom: "10px" }} />
+                <FontAwesomeIcon icon={ faAngleDown } style={{ width: "24px", height: "24px", marginBottom: "10px" }} id="mouse-arrow" />
             </div>
         </header>
     )
