@@ -12,6 +12,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 main {
   background-color: var(--grey);
   height: 100vh;
@@ -93,6 +97,7 @@ header {
 header .personal-info {
   margin-top: 150px;
   margin-right: 100px;
+  margin-left: 100px;
 }
 header .personal-info .name-color {
   color: var(--green);
@@ -155,7 +160,6 @@ header .main-info {
   z-index: 2;
   display: flex;
   justify-content: space-between;
-  align-items: top;
   width: 1500px;
 }
 header .background-shapes {
@@ -186,10 +190,10 @@ header .background-shapes #circle-3 {
   left: 1730px;
   top: 517px;
 }
-header .background-shapes img {
-  position: relative;
-  left: 900px;
-  top: -370px;
+header #skill-wheel {
+  position: absolute;
+  left: 48%;
+  top: 5%;
 }
 header .mouse-scroll {
   display: flex;
@@ -210,10 +214,11 @@ header .mouse-scroll #mouse-arrow {
 }
 .about-me-background {
   background-color: var(--dark-grey);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap-reverse;
 }
 
 .categories {
@@ -570,6 +575,39 @@ a {
 }
 .footer-section .footer-socials a {
   color: white;
+}
+
+@media screen and (max-width: 1600px) {
+  header .portrait img {
+    max-width: 530px;
+    margin-right: 80px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  header .personal-info {
+    margin-right: 0;
+    margin-left: 70px;
+  }
+  header .personal-info h1 {
+    font-size: 45px;
+  }
+  header .personal-info .typed-text {
+    font-size: 30px;
+  }
+  header .portrait img {
+    max-width: 500px;
+    margin-right: 80px;
+  }
+
+  .nav-bar {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  header .personal-info h1 {
+    font-size: 30px;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

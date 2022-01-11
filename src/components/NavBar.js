@@ -16,11 +16,11 @@ export const NavBar = () => {
             <ul className="social-links">
                 <li><a href="https://github.com/Keelan-Matthews" target="_blank">
                     <FontAwesomeIcon icon={ faGithub } style={{ width: "24px", height: "24px", margin: "10px"}} />
-                    GitHub
+                    <p>GitHub</p>
                 </a></li>
                 <li><a href="https://www.linkedin.com/in/keelan-matthews-645b13201/" target="_blank">
                     <FontAwesomeIcon icon={ faLinkedin } style={{ width: "24px", height: "24px", margin: "10px"}} />
-                    LinkedIn
+                    <p>LinkedIn</p>
                 </a></li>
                 <li><a href="mailto:keelanmatthews123@gmail.com" target="_blank">
                     <div className="email-icon">

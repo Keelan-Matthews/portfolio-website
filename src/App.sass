@@ -11,6 +11,9 @@
     padding: 0
     box-sizing: border-box
 
+body
+    overflow-x: hidden
+
 main 
     background-color: var(--grey)
     height: 100vh
@@ -87,6 +90,7 @@ header
     .personal-info
         margin-top: 150px
         margin-right: 100px
+        margin-left: 100px
         .name-color
             color: var(--green)
 
@@ -149,7 +153,6 @@ header
         z-index: 2
         display: flex
         justify-content: space-between
-        align-items: top
         width: 1500px
 
     .background-shapes
@@ -179,10 +182,10 @@ header
             left: 1730px
             top: 517px
 
-        img
-            position: relative
-            left: 900px
-            top: -370px
+    #skill-wheel
+        position: absolute
+        left: 48%
+        top: 5%
 
     .mouse-scroll
         display: flex
@@ -203,10 +206,11 @@ header
 //****************************About Me Styling*******************************************
 .about-me-background
     background-color: var(--dark-grey)   
-    height: 100vh  
+    min-height: 100vh  
     display: flex 
     align-items: center 
     justify-content: center
+    flex-wrap: wrap-reverse
 
 .categories
    
@@ -556,4 +560,39 @@ a
         a 
             color: white
 
-            
+//**********************************Media Queries*******************************************    
+@media screen and (max-width: 1600px)
+    header
+        .portrait
+            img
+                max-width: 530px
+                margin-right: 80px
+
+@media screen and (max-width: 1400px)
+    header 
+        .personal-info
+            h1 
+                font-size: 45px
+
+            .typed-text
+                font-size: 30px
+
+            margin-right: 0
+            margin-left: 70px
+
+        .portrait
+            img
+                max-width: 500px
+                margin-right: 80px
+
+    .nav-bar
+        padding-left: 100px
+        padding-right: 100px
+
+@media screen and (max-width: 1150px)
+    header
+        .personal-info
+            h1
+                font-size: 30px
+
+@media screen and (max-width: 900px)
