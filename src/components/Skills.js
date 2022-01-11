@@ -20,6 +20,7 @@ export const Skills = () => {
                         </div>
                         <h2>Skills</h2>
                     </div>
+                    <div className="green-circle-skills"></div>
                 </div>
                 <div className="skill-container">
                     <SkillCard vector={ HtmlCss } alt="HTML and CSS logo" name="HTML/CSS" />
@@ -30,9 +31,6 @@ export const Skills = () => {
                     <SkillCard vector={ psLogo } alt="Adobe Photoshop logo" name="Adobe Photoshop" />
                     <SkillCard vector={ FigmaLogo } alt="Figma logo" name="Figma" />
                     <SkillCard vector={ Blender } alt="Blender logo" name="Blender" />
-                </div>
-                <div className="background">
-                    <div className="green-circle-skills"></div>
                 </div>
             </div>
         </section>

@@ -38,7 +38,7 @@ h3 {
 }
 
 .nav-bar {
-  z-index: 5;
+  z-index: 10000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -163,10 +163,13 @@ header .personal-info .main-buttons .secondary-button {
   color: var(--green);
   box-shadow: 1px -1px 20px 0px rgba(0, 0, 0, 0.54);
 }
+header .portrait {
+  margin-top: 94px;
+}
 header .portrait img {
+  z-index: 10;
   width: 580px;
   margin-right: 20px;
-  margin-top: 94px;
   filter: contrast(1.1);
   filter: drop-shadow(0px 2px 30px #00000096);
 }
@@ -204,10 +207,12 @@ header .background-shapes #circle-3 {
   left: 1730px;
   top: 517px;
 }
-header #skill-wheel {
-  position: absolute;
-  left: 48%;
-  top: 5%;
+header .background-shapes #skill-wheel {
+  position: relative;
+  z-index: 1;
+  width: 800px;
+  top: -38%;
+  right: -52%;
 }
 header .mouse-scroll {
   display: flex;
@@ -241,6 +246,7 @@ header .mouse-scroll #mouse-arrow {
   flex-direction: column;
   justify-content: space-between;
   margin-right: 300px;
+  z-index: 2;
 }
 .categories .category-card {
   width: 500px;
@@ -344,18 +350,18 @@ header .mouse-scroll #mouse-arrow {
   max-width: 80vw;
 }
 .skills-section .skills-wrapper .heading-wrapper {
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
   width: 100%;
 }
-
-.heading {
+.skills-section .skills-wrapper .heading-wrapper .heading {
+  grid-row: 1;
+  grid-column: 1;
   max-width: 80vw;
   display: flex;
   flex-direction: column;
   z-index: 2;
 }
-.heading div {
+.skills-section .skills-wrapper .heading-wrapper .heading div {
   width: 43px;
   height: 20px;
   background-color: var(--green);
@@ -364,17 +370,26 @@ header .mouse-scroll #mouse-arrow {
   align-items: center;
   border-radius: 3px;
 }
-.heading div small {
+.skills-section .skills-wrapper .heading-wrapper .heading div small {
   font-size: 10px;
 }
-.heading h2 {
+.skills-section .skills-wrapper .heading-wrapper .heading h2 {
   width: 100px;
   height: 60px;
   background-color: var(--darkest-grey);
 }
+.skills-section .skills-wrapper .heading-wrapper .green-circle-skills {
+  position: absolute;
+  grid-row: 1;
+  grid-column: 1;
+  width: 220px;
+  height: 220px;
+  border: 3px solid var(--green);
+  border-radius: 100%;
+  transform: translateY(45px) translateX(-20px);
+}
 
 .skill-container {
-  z-index: 2;
   width: 80vw;
   display: flex;
   justify-content: center;
@@ -393,6 +408,7 @@ header .mouse-scroll #mouse-arrow {
   margin: 8px;
   box-shadow: 1px -1px 20px 0px rgba(0, 0, 0, 0.24);
   transition: transform 0.2s ease;
+  z-index: 3;
 }
 .skill-card-container img {
   width: 80px;
@@ -405,19 +421,6 @@ header .mouse-scroll #mouse-arrow {
   transform: scale(1.03);
 }
 
-.background {
-  position: absolute;
-}
-.background .green-circle-skills {
-  position: relative;
-  left: -700px;
-  top: 50px;
-  width: 220px;
-  height: 220px;
-  border: 3px solid var(--green);
-  border-radius: 100%;
-}
-
 .projects-section {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -426,39 +429,94 @@ header .mouse-scroll #mouse-arrow {
   flex-direction: column;
   align-items: center;
 }
-.projects-section .heading h2 {
+.projects-section .project-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.projects-section .project-wrapper .heading-wrapper-projects {
+  display: grid;
+  width: 300px;
+}
+.projects-section .project-wrapper .heading-wrapper-projects .heading {
+  z-index: 1000;
+}
+.projects-section .project-wrapper .heading-wrapper-projects .heading h2 {
   background-color: var(--dark-grey);
   width: 170px;
   padding-left: 10px;
+  grid-row: 1;
+  grid-column: 1;
 }
-.projects-section .project-container {
+.projects-section .project-wrapper .heading-wrapper-projects .heading div {
+  width: 43px;
+  height: 20px;
+  background-color: var(--green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+.projects-section .project-wrapper .heading-wrapper-projects .heading div small {
+  font-size: 10px;
+}
+.projects-section .project-wrapper .heading-wrapper-projects .green-circle-projects {
+  position: absolute;
+  grid-row: 1;
+  grid-column: 1;
+  width: 220px;
+  height: 220px;
+  border: 3px solid var(--green);
+  border-radius: 100%;
+  transform: translateY(45px) translateX(-20px);
+  z-index: 0;
+}
+.projects-section .project-wrapper .project-container {
   display: flex;
   max-width: 90vw;
   justify-content: center;
   flex-wrap: wrap;
 }
 .projects-section #circle-8, .projects-section #circle-9, .projects-section #circle-10, .projects-section #circle-11, .projects-section #circle-12, .projects-section #circle-13 {
-  position: relative;
+  position: absolute;
   background-color: var(--grey);
   border-radius: 100%;
 }
 .projects-section #circle-8 {
   width: 70px;
   height: 70px;
-  left: 40px;
+  left: 600px;
   top: -320px;
 }
 .projects-section #circle-9 {
   width: 30px;
   height: 30px;
-  left: 1400px;
-  top: -380px;
+  left: 800px;
+  top: -800px;
 }
 .projects-section #circle-10 {
   width: 130px;
   height: 130px;
-  left: 1860px;
+  left: 700px;
   top: -300px;
+}
+.projects-section #circle-11 {
+  width: 110px;
+  height: 110px;
+  left: -700px;
+  top: -600px;
+}
+.projects-section #circle-12 {
+  width: 60px;
+  height: 60px;
+  left: -700px;
+  top: -1000px;
+}
+.projects-section #circle-13 {
+  width: 40px;
+  height: 40px;
+  left: 0px;
+  top: -1300px;
 }
 
 .project-card-container {
@@ -471,6 +529,7 @@ header .mouse-scroll #mouse-arrow {
   border-radius: 10px;
   box-shadow: 1px -1px 30px 0px rgba(0, 0, 0, 0.24);
   transition: transform 0.3s ease;
+  z-index: 10;
 }
 .project-card-container:hover {
   transform: scale(1.006);
@@ -514,20 +573,6 @@ header .mouse-scroll #mouse-arrow {
 
 a {
   text-decoration: none;
-}
-
-.green-circle-projects {
-  position: relative;
-  left: -750px;
-  top: 40px;
-  width: 250px;
-  height: 250px;
-  border: 3px solid var(--green);
-  border-radius: 100%;
-}
-
-.align-left {
-  z-index: 3;
 }
 
 .contact-section {
@@ -592,10 +637,20 @@ a {
   color: white;
 }
 
+@media screen and (max-width: 1900px) {
+  .projects-section .project-wrapper {
+    max-width: 1000px;
+  }
+}
 @media screen and (max-width: 1600px) {
   header .portrait img {
     max-width: 530px;
     margin-right: 80px;
+  }
+  header .background-shapes #skill-wheel {
+    width: 700px;
+    top: -30%;
+    right: -54%;
   }
 }
 @media screen and (max-width: 1400px) {
@@ -612,6 +667,11 @@ a {
   header .portrait img {
     max-width: 500px;
     margin-right: 80px;
+  }
+  header .background-shapes #skill-wheel {
+    max-width: 700px;
+    top: -27%;
+    right: -44%;
   }
 
   .nav-bar {
@@ -646,6 +706,11 @@ a {
   header .portrait img {
     max-width: 400px;
     margin-right: 10px;
+  }
+  header .background-shapes #skill-wheel {
+    max-width: 600px;
+    top: -12%;
+    right: -47%;
   }
 }
 @media screen and (max-width: 1060px) {
@@ -715,7 +780,23 @@ a {
   header .main-info .portrait img {
     width: 40vh;
   }
-  header .main-info .mouse-scroll {
+  header .background-shapes {
+    height: 85vh;
+  }
+  header .background-shapes #circle-1 {
+    display: none;
+  }
+  header .background-shapes #circle-2 {
+    display: none;
+  }
+  header .background-shapes #circle-3 {
+    display: none;
+  }
+  header .background-shapes #skill-wheel {
+    width: 600px;
+    right: -15%;
+  }
+  header .mouse-scroll {
     display: none;
   }
 }
@@ -735,6 +816,10 @@ a {
   }
   .project-card-container .project-info p {
     font-size: 1.9vw;
+  }
+
+  header .background-shapes #skill-wheel {
+    right: -10%;
   }
 }
 @media screen and (min-width: 650px) {
@@ -778,6 +863,9 @@ a {
   header {
     margin-top: 50px;
   }
+  header .background-shapes #skill-wheel {
+    right: -3%;
+  }
 
   .project-card-container {
     flex-direction: column;
@@ -811,6 +899,10 @@ a {
     font-size: 13px;
   }
 }
+.about-me-background-circles #circle-4, .about-me-background-circles #circle-5, .about-me-background-circles #circle-6, .about-me-background-circles #circle-7 {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   .categories .category-card {
     width: 80%;
@@ -837,6 +929,12 @@ a {
   .contact-section div {
     max-width: 50vw;
     font-size: 4vw;
+  }
+}
+@media screen and (max-width: 580px) {
+  header .background-shapes #skill-wheel {
+    left: 0;
+    width: 500px;
   }
 }
 

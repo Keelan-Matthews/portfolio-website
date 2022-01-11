@@ -31,12 +31,12 @@ export const Header = () => {
                     <img src={ Portrait } alt="This image is a self-portrait"  />
                 </div>
             </div>
-            {/* <div className="background-shapes">
+            <div className="background-shapes">
                 <div id="circle-1"></div>
                 <div id="circle-2"></div>
                 <div id="circle-3"></div>
+                <img src={ SkillWheel } id="skill-wheel" />
             </div>
-            <img src={ SkillWheel } id="skill-wheel" /> */}
             <div className="mouse-scroll">
                 <FontAwesomeIcon icon={ faMouse } style={{ width: "24px", height: "24px" }} />
                 <FontAwesomeIcon icon={ faAngleDown } style={{ width: "24px", height: "24px", marginBottom: "10px" }} id="mouse-arrow" />
