@@ -10,7 +10,9 @@
     margin: 0
     padding: 0
     box-sizing: border-box
-
+html 
+    scroll-behavior: smooth 
+    
 body
     overflow-x: hidden
 
@@ -184,18 +186,42 @@ header
             height: 250px
             top: 600px
             left: -121px
+            animation: random-movement-1 3s ease alternate infinite
 
         #circle-2
             width: 100px
             height: 100px
             left: 103px
             top: -100px
+            animation: random-movement-2 2s ease alternate infinite
 
         #circle-3
             width: 70px
             height: 70px
             left: 1730px
             top: 517px
+            animation: random-movement-3 2s ease alternate infinite
+
+        @keyframes random-movement-1 
+            0% 
+                transform: translateY(0) translateX(0)
+        
+            100% 
+                transform: translateY(14px) translateX(14px)
+
+        @keyframes random-movement-2
+            0% 
+                transform: translateY(0) translateX(0)
+        
+            100% 
+                transform: translateY(14px) translateX(-10px)
+
+        @keyframes random-movement-3
+            0% 
+                transform: translateY(0) translateX(0)
+        
+            100% 
+                transform: translateY(11px) translateX(5px)
 
         #skill-wheel
             position: relative
@@ -253,10 +279,10 @@ header
             margin-bottom: 30px
 
         p 
-            font-size: 14px
+            font-size: 15px
             letter-spacing: 0.5px
             line-height: 23px
-            font-weight: 400
+            font-weight: 200
 
         &:hover
             .title
@@ -285,11 +311,11 @@ header
         margin-top: 25px
 
     p 
-        font-weight: 400
+        font-weight: 200
         letter-spacing: 0.5px
         line-height: 23px
         width: 500px
-        font-size: 14px
+        font-size: 15px
 
 .about-me-background-circles
     position: absolute 

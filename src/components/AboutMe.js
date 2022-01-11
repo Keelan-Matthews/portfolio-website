@@ -35,7 +35,7 @@ export const AboutMe = () => {
                     About
                 </small></div>
                 
-                <h2>Allow me to<br /> introduce myself</h2>
+                <h2>A little bit<br /> about the developer</h2>
                 <h4>Background</h4>
                 <p>
                     I am an aspiring UI/UX Designer from Johannesburg, South Africa. Growing up, I have always had an insatiable desire for creativity and perfection. This, coupled up with my thorough enjoyment in coding, lead me down my current path.<br /><br />

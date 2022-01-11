@@ -1,0 +1,25 @@
+<svg id="html-icon" xmlns="http://www.w3.org/2000/svg" width="5803.75" height="6582.04" viewBox="0 0 5803.75 6582.04">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e4603e;
+      }
+
+      .cls-2 {
+        fill: #f1895c;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        fill: #ebebeb;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M5275,5956,2898.4,6614.71,528.14,5956.56,0,32.67H5803.75" transform="translate(0 -32.67)"/>
+  <path class="cls-2" d="M5274.45,516.7H2901.88V6110.94l1920.46-532.2" transform="translate(0 -32.67)"/>
+  <path class="cls-3" d="M4719.61,1243.33h-1820V1970h1755M4589,2714H2899.56V5357.62l1489.82-413.23M2899.56,3440.64h895.52l-84.16,942.53L2899.56,4602" transform="translate(0 -32.67)"/>
+  <path class="cls-4" d="M1275.67,3440.64H2901.3V2714H1939.61L1873.45,1970H2901.3V1243.33H1079.5M1409.73,4945l1489.83,412.65,2.32-.58V4601.39l-2.32.58-810.21-218.22L2037.7,3804H1308.17" transform="translate(0 -32.67)"/>
+</svg>
