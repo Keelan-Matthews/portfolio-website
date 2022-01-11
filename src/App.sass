@@ -451,6 +451,7 @@ header
 .project-card-container
     display: flex
     max-width: 820px
+    min-height: 310px
     background-color: var(--grey)
     padding: 10px
     margin: 20px
@@ -603,6 +604,11 @@ a
         padding-left: 100px
         padding-right: 100px
 
+@media screen and (max-width: 1316px)
+    .about-me-background
+        .categories
+            margin-right: 40px
+
 @media screen and (max-width: 1160px)
     header
         .personal-info
@@ -626,6 +632,27 @@ a
                 max-width: 400px
                 margin-right: 10px
 
+@media screen and (max-width: 1060px)
+    .about-me-background
+        flex-direction: column-reverse
+        padding-top: 100px
+        padding-bottom: 170px
+
+        .categories
+            align-items: center
+            margin-top: 80px
+            margin-right: 0px
+
+@media screen and (max-width: 930px)
+    .project-card-container
+        img 
+            max-width: 350px
+            max-height: 350px
+
+        .project-info
+            .project-link
+                margin-top: 30px
+
 @media screen and (max-width: 900px)
     .nav-bar
         padding-left: 30px
@@ -640,7 +667,58 @@ a
                 display: none
 
 @media screen and (max-width: 883px) //Convert to mobile, portrait
-    
+    header 
+        max-height: 95vh
+        .main-info
+            flex-direction: column-reverse
+            align-items: center
+
+            .personal-info
+                margin: 0
+                background-color: var(--darkest-grey)
+                width: 100%    
+                height: 300px         
+                display: flex
+                justify-content: center
+                align-items: center
+
+
+
+                .main-buttons
+                    width: 100%
+                    justify-content: space-around
+                    margin-top: 40px
+                    flex-wrap: wrap
+
+                    .primary-button, .secondary-button
+                        width: 170px
+                        height: 50px
+                        font-size: 15px
+
+            .portrait
+                img 
+                    width: 40vh
+
+            .mouse-scroll
+                display: none
+
+@media screen and (max-width: 800px)
+    .project-card-container
+        img 
+            max-width: 40vw
+            max-height: 40vw
+
+        .project-info
+            padding-top: 10px
+            padding-bottom: 0
+            padding-right: 20px
+            justify-content: flex-start
+
+            h3
+                font-size: 2.5vw
+
+            p
+                font-size: 1.9vw
 
 @media screen and (min-width: 650px)
     .menu-icon
@@ -678,3 +756,61 @@ a
 
     header
         margin-top: 50px
+
+    .project-card-container
+        flex-direction: column 
+        img 
+            max-width: 70vw
+            max-height: 70vw
+            border-radius: 8px 8px 0 0
+
+        .project-info
+            padding-top: 10px
+            padding-bottom: 10px
+            padding-right: 0
+            padding-left: 10px
+            justify-content: flex-start
+
+            h3
+                font-size: 4vw
+
+            p
+                font-size: 2.6vw
+                max-width: 63vw
+
+            .project-link
+                width: 40% 
+                height: 60%
+                margin-bottom: 20px
+
+                p 
+                    letter-spacing: 1px
+                    font-size: 13px
+
+@media screen and (max-width: 600px)
+    .categories
+        .category-card
+            width: 80%
+
+    .introduction
+        p 
+            max-width: 400px
+
+    .footer-section
+        flex-direction: column
+
+        .footer-details
+            margin-right: 0
+
+            .detail
+                font-size: 3vw
+                letter-spacing: 0.6px
+
+    .contact-section
+        h2
+            font-size: 6vw
+
+        div 
+            max-width: 50vw
+            font-size: 4vw
+
