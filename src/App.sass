@@ -37,6 +37,7 @@ h3
     z-index: 5
     display: flex
     justify-content: space-between
+    align-items: center
     width: 100%
     padding-left: 300px
     padding-right: 300px
@@ -44,14 +45,23 @@ h3
     background-color: var(--grey)
     top: 0px
 
+    #show-links
+        display: flex
+
     li
         list-style: none
+        width: 100%
+        height: 80%
+        display: flex 
+        justify-content: center
+        align-items: center
+        &:hover 
+            a
+                color: var(--green)
+
         a
             text-decoration: none
-            color: white
-
-            &:hover 
-                color: var(--green)
+            color: white             
 
     .navigation
         display: flex
@@ -79,16 +89,19 @@ h3
     align-items: center
     font-size: 24px
 
+.menu-icon
+    font-size: 40px
+
 //*************************Header Styling*******************************************
 header
-    height: 90.1vh 
+    max-height: 90.1vh 
     display: flex
     align-items: flex-end
     justify-content: center
     margin-top: 100px
     
     .personal-info
-        margin-top: 150px
+        margin-top: 250px
         margin-right: 100px
         margin-left: 100px
         .name-color
@@ -146,6 +159,7 @@ header
         img
             width: 580px
             margin-right: 20px
+            margin-top: 94px
             filter: contrast(1.1)
             filter: drop-shadow(0px 2px 30px #00000096)
 
@@ -589,10 +603,78 @@ a
         padding-left: 100px
         padding-right: 100px
 
-@media screen and (max-width: 1150px)
+@media screen and (max-width: 1160px)
     header
         .personal-info
+            margin-top: 180px
             h1
-                font-size: 30px
+                font-size: 35px
+
+            .typed-text
+                font-size: 20px
+
+            .main-buttons
+                width: 270px
+                .primary-button, .secondary-button
+                    width: 130px
+                    height: 49px
+                    font-size: 13px
+                    letter-spacing: 0.4px
+
+        .portrait
+            img
+                max-width: 400px
+                margin-right: 10px
 
 @media screen and (max-width: 900px)
+    .nav-bar
+        padding-left: 30px
+        padding-right: 30px
+
+        .navigation
+            width: 300px
+
+        .social-links
+            width: 200px
+            p
+                display: none
+
+@media screen and (max-width: 883px) //Convert to mobile, portrait
+    
+
+@media screen and (min-width: 650px)
+    .menu-icon
+        display: none
+
+@media screen and (max-width: 650px)
+    .nav-bar
+        padding-right: 50px
+        height: 80px
+
+        #show-links
+            position: absolute
+            left: 0px
+            top: 80px 
+            height: 200px
+            width: 100%
+            background-color: var(--dark-grey)
+            flex-direction: column
+            align-items: flex-start
+            justify-content: center
+
+            li 
+                padding-left: 40px
+                display: flex 
+                align-items: center
+                width: 100%
+                height: 100%
+        .navigation
+            display: none
+
+        .social-links
+            width: 50px
+            .mail-button
+                display: none 
+
+    header
+        margin-top: 50px
