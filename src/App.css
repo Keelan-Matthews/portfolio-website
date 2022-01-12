@@ -41,6 +41,14 @@ h3 {
   letter-spacing: 0.8px;
 }
 
+.loader {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @keyframes slideInLeft {
   0% {
     transform: translateX(-100%);
@@ -172,6 +180,19 @@ header .personal-info .main-buttons .primary-button {
   color: white;
   box-shadow: 1px -1px 20px 0px rgba(0, 0, 0, 0.54);
 }
+header .personal-info .main-buttons .primary-button:hover {
+  animation: primary-button-animation 1s ease alternate infinite;
+}
+@keyframes primary-button-animation {
+  0% {
+    transform: scale(1);
+    box-shadow: 1px -1px 20px 0px rgba(0, 0, 0, 0.54);
+  }
+  100% {
+    transform: scale(1.1);
+    box-shadow: 1px -1px 10px 0px var(--green);
+  }
+}
 header .personal-info .main-buttons .secondary-button {
   width: 180px;
   height: 54px;
@@ -183,11 +204,26 @@ header .personal-info .main-buttons .secondary-button {
   color: var(--green);
   box-shadow: 1px -1px 20px 0px rgba(0, 0, 0, 0.54);
 }
+header .personal-info .main-buttons .secondary-button:hover {
+  animation: secondary-button-animation 1s ease alternate infinite;
+}
+@keyframes secondary-button-animation {
+  0% {
+    transform: scale(1);
+    box-shadow: 1px -1px 20px 0px rgba(0, 0, 0, 0.54);
+    border: 0px solid white;
+  }
+  100% {
+    transform: scale(1.1);
+    box-shadow: 1px -1px 10px 0px #d4d4d48a;
+    border: 3px solid var(--green);
+  }
+}
 header .portrait {
   margin-top: 94px;
   display: grid;
 }
-header .portrait img {
+header .portrait #portrait-id {
   z-index: 10;
   width: 580px;
   margin-right: 20px;
@@ -513,6 +549,7 @@ header .mouse-scroll #mouse-arrow {
 }
 .skill-card-container:hover {
   transform: scale(1.03);
+  border: 2px solid var(--green);
 }
 
 .projects-section {
@@ -638,6 +675,7 @@ header .mouse-scroll #mouse-arrow {
 }
 .project-card-container:hover {
   transform: scale(1.006);
+  border: 2px solid var(--green);
 }
 .project-card-container img {
   max-width: 450px;

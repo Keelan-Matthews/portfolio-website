@@ -1,7 +1,8 @@
 import React from 'react';
 import Typed from 'react-typed';
-import Portrait from '../media/images/portrait.png';
+import Portrait from '../media/images/portrait.webp';
 import SkillWheel from '../media/svg/skill-wheel.svg';
+import CV from '../media/pdf/keelan-matthews-cv.pdf'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMouse } from "@fortawesome/free-solid-svg-icons";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
@@ -22,14 +23,14 @@ export const Header = () => {
                             loop
                         />
                         <div className="main-buttons">
-                            <a href="#" target="_blank" className="primary-button"><div>Download CV</div></a>
+                            <a href={ CV } download="Keelan Matthews CV" className="primary-button"><div>Download CV</div></a>
                             <a href="mailto:keelanmatthews123@gmail.com" target="_blank" className="secondary-button"><div>Contact Me</div></a>
                         </div>
                     </div>
                 </div>
                 <div className="portrait-container">
                     <div className="portrait">
-                        <img src={ Portrait } alt="This image is a self-portrait" id="portrait-id"  />
+                        <img src={ Portrait } alt="This image is a self-portrait" id="portrait-id" />
                         <img src={ SkillWheel } id="skill-wheel" />
                     </div>
                 </div>

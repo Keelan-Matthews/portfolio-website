@@ -34,6 +34,14 @@ h3
     font-weight: 300 
     letter-spacing: 0.8px
 
+//******************************Preloader*********************************
+.loader
+    width: 100%
+    height: 100vh
+    display: flex 
+    justify-content: center 
+    align-items: center
+
 //****************************Page load animations*****************************************
 @keyframes slideInLeft
     0%  
@@ -153,32 +161,56 @@ header
                 font-weight: 600
 
             .primary-button
-                    width: 180px
-                    height: 54px
-                    background-color: var(--green)
-                    border-radius: 7px
-                    display: flex
-                    justify-content: center
-                    align-items: center
-                    color: white
-                    box-shadow: 1px -1px 20px 0px rgba(0,0,0,0.54)
+                width: 180px
+                height: 54px
+                background-color: var(--green)
+                border-radius: 7px
+                display: flex
+                justify-content: center
+                align-items: center
+                color: white
+                box-shadow: 1px -1px 20px 0px rgba(0,0,0,0.54)
 
+                &:hover 
+                    animation: primary-button-animation 1s ease alternate infinite
+
+                @keyframes primary-button-animation
+                    0%
+                        transform: scale(1)
+                        box-shadow: 1px -1px 20px 0px rgba(0,0,0,0.54)
+                    100%
+                        transform: scale(1.1)
+                        box-shadow: 1px -1px 10px 0px var(--green)
+                        
             .secondary-button
-                    width: 180px
-                    height: 54px
-                    background-color: white
-                    border-radius: 7px
-                    display: flex
-                    justify-content: center
-                    align-items: center
-                    color: var(--green)
-                    box-shadow: 1px -1px 20px 0px rgba(0,0,0,0.54)
+                width: 180px
+                height: 54px
+                background-color: white
+                border-radius: 7px
+                display: flex
+                justify-content: center
+                align-items: center
+                color: var(--green)
+                box-shadow: 1px -1px 20px 0px rgba(0,0,0,0.54)
+
+                &:hover 
+                    animation: secondary-button-animation 1s ease alternate infinite
+
+                @keyframes secondary-button-animation
+                    0%
+                        transform: scale(1)
+                        box-shadow: 1px -1px 20px 0px rgba(0,0,0,0.54)
+                        border: 0px solid white
+                    100%
+                        transform: scale(1.1)
+                        box-shadow: 1px -1px 10px 0px #d4d4d48a
+                        border: 3px solid var(--green)
 
     .portrait
         margin-top: 94px
         display: grid
         
-        img
+        #portrait-id
             z-index: 10
             width: 580px
             margin-right: 20px
@@ -504,6 +536,8 @@ header
 
     &:hover
         transform: scale(1.03)
+        border: 2px solid var(--green)
+
 
 //********************************Projects Styling****************************************
 .projects-section
@@ -627,6 +661,7 @@ header
 
     &:hover
         transform: scale(1.006)
+        border: 2px solid var(--green)
 
     img
         max-width: 450px

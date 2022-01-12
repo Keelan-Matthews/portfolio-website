@@ -1,7 +1,7 @@
 import React from 'react';
 import { ProjectCard } from './ProjectCard';
-import RegalTMockup from '../media/images/regal-t-mockup.png';
-import BursaryBuffetMockup from '../media/images/bursary-buffet-mockup.png';
+import RegalTMockup from '../media/images/regal-t-mockup.webp';
+import BursaryBuffetMockup from '../media/images/bursary-buffet-mockup.webp';
 
 export const Projects = () => {
     return (
