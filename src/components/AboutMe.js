@@ -30,22 +30,24 @@ export const AboutMe = () => {
                     <p>Experience in coding in Delphi, C++ and Java.</p>
                 </div>
             </div>
-            <div className="introduction">
-                <div><small>
-                    About
-                </small></div>
-                
-                <h2>A little bit<br /> about the developer</h2>
-                <h4>Background</h4>
-                <p>
-                    I am an aspiring UI/UX Designer from Johannesburg, South Africa. Growing up, I have always had an insatiable desire for creativity and perfection. This, coupled up with my thorough enjoyment in coding, lead me down my current path.<br /><br />
-                    I have a thorough passion for coding, be it in programming or markup languages. The idea of being able to produce anything from scratch intrigues me. This also includes designing vector graphics, 3D renders, animations and even music.<br /><br />
-                    I am able to pick up new skills very quickly, and always complete my deadlines early. In the event of time constraints, I thrive under pressure.
-                </p>
-                <h4>Goal</h4>
-                <p>
-                    To design and develop websites and applications that reflect the personality and motives of prospective clients.
-                </p>
+            <div className="introduction-wrapper">
+                <div className="introduction">
+                    <div><small>
+                        About
+                    </small></div>
+                    
+                    <h2>A little bit<br /> about the developer</h2>
+                    <h4>Background</h4>
+                    <p>
+                        I am an aspiring UI/UX Designer from Johannesburg, South Africa. Growing up, I have always had an insatiable desire for creativity and perfection. This, coupled up with my thorough enjoyment in coding, lead me down my current path.<br /><br />
+                        I have a thorough passion for coding, be it in programming or markup languages. The idea of being able to produce anything from scratch intrigues me. This also includes designing vector graphics, 3D renders, animations and even music.<br /><br />
+                        I am able to pick up new skills very quickly, and always complete my deadlines early. In the event of time constraints, I thrive under pressure.
+                    </p>
+                    <h4>Goal</h4>
+                    <p>
+                        To design and develop websites and applications that reflect the personality and motives of prospective clients.
+                    </p>
+                </div>
             </div>
             <div className="about-me-background-circles">
                 <div id="circle-4"></div>

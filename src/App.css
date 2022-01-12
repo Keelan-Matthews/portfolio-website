@@ -41,6 +41,14 @@ h3 {
   letter-spacing: 0.8px;
 }
 
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .nav-bar {
   z-index: 10000;
   display: flex;
@@ -106,6 +114,7 @@ h3 {
 
 header {
   max-height: 90.1vh;
+  min-height: 800px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -125,6 +134,8 @@ header .personal-info .typed-text {
   font-weight: regular;
   font-size: 38px;
   text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.74);
+  animation: slideInLeft 1s ease;
+  animation-delay: 0.4s;
 }
 header .personal-info h1 {
   font-family: poppins;
@@ -134,6 +145,11 @@ header .personal-info h1 {
   margin-bottom: 10px;
   letter-spacing: 0.6px;
   text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.74);
+  animation: slideInLeft 0.5s ease;
+  animation-delay: 0.2s;
+}
+header .personal-info p {
+  animation: slideInLeft 0.5s ease;
 }
 header .personal-info .main-buttons {
   display: flex;
@@ -169,6 +185,7 @@ header .personal-info .main-buttons .secondary-button {
 }
 header .portrait {
   margin-top: 94px;
+  display: grid;
 }
 header .portrait img {
   z-index: 10;
@@ -176,6 +193,16 @@ header .portrait img {
   margin-right: 20px;
   filter: contrast(1.1);
   filter: drop-shadow(0px 2px 30px #00000096);
+  grid-row: 1;
+  grid-column: 1;
+}
+header .portrait #skill-wheel {
+  position: absolute;
+  grid-row: 1;
+  grid-column: 1;
+  z-index: 1;
+  width: 800px;
+  transform: translateX(-90px) translateY(-90px);
 }
 header .main-info {
   z-index: 2;
@@ -237,13 +264,6 @@ header .background-shapes #circle-3 {
   100% {
     transform: translateY(-25px) translateX(18px);
   }
-}
-header .background-shapes #skill-wheel {
-  position: relative;
-  z-index: 1;
-  width: 800px;
-  top: -38%;
-  right: -52%;
 }
 header .mouse-scroll {
   display: flex;
@@ -728,17 +748,18 @@ a {
   }
 }
 @media screen and (max-width: 1600px) {
-  header .portrait img {
+  header .portrait #portrait-id {
     max-width: 530px;
     margin-right: 80px;
   }
-  header .background-shapes #skill-wheel {
+  header .portrait #skill-wheel {
     width: 700px;
-    top: -30%;
-    right: -54%;
   }
 }
 @media screen and (max-width: 1400px) {
+  header {
+    min-height: 700px;
+  }
   header .personal-info {
     margin-right: 0;
     margin-left: 70px;
@@ -749,14 +770,9 @@ a {
   header .personal-info .typed-text {
     font-size: 30px;
   }
-  header .portrait img {
+  header .portrait #portrait-id {
     max-width: 500px;
     margin-right: 80px;
-  }
-  header .background-shapes #skill-wheel {
-    max-width: 700px;
-    top: -27%;
-    right: -44%;
   }
 
   .nav-bar {
@@ -770,32 +786,34 @@ a {
   }
 }
 @media screen and (max-width: 1160px) {
-  header .personal-info {
+  header {
+    min-height: 500px;
+  }
+  header .main-info .personal-info {
     margin-top: 180px;
   }
-  header .personal-info h1 {
+  header .main-info .personal-info h1 {
     font-size: 35px;
   }
-  header .personal-info .typed-text {
+  header .main-info .personal-info .typed-text {
     font-size: 20px;
   }
-  header .personal-info .main-buttons {
+  header .main-info .personal-info .main-buttons {
     width: 270px;
   }
-  header .personal-info .main-buttons .primary-button, header .personal-info .main-buttons .secondary-button {
+  header .main-info .personal-info .main-buttons .primary-button, header .main-info .personal-info .main-buttons .secondary-button {
     width: 130px;
     height: 49px;
     font-size: 13px;
     letter-spacing: 0.4px;
   }
-  header .portrait img {
-    max-width: 400px;
-    margin-right: 10px;
+  header .main-info .portrait #portrait-id {
+    max-width: 350px;
+    margin-right: 80px;
   }
-  header .background-shapes #skill-wheel {
-    max-width: 600px;
-    top: -12%;
-    right: -47%;
+  header .main-info .portrait #skill-wheel {
+    max-width: 500px;
+    transform: translateX(-60px) translateY(-70px);
   }
 }
 @media screen and (max-width: 1060px) {
@@ -836,7 +854,8 @@ a {
 }
 @media screen and (max-width: 883px) {
   header {
-    max-height: 95vh;
+    max-height: 100vh;
+    min-height: 700px;
   }
   header .main-info {
     flex-direction: column-reverse;
@@ -846,34 +865,41 @@ a {
     margin: 0;
     background-color: var(--darkest-grey);
     width: 100%;
-    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  header .main-info .personal-info .info-wrapper p {
+    font-size: 3vw;
+  }
+  header .main-info .personal-info .info-wrapper h1 {
+    font-size: 6vw;
+  }
+  header .main-info .personal-info .info-wrapper .typed-text {
+    font-size: 4vw;
   }
   header .main-info .personal-info .main-buttons {
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 40px;
-    flex-wrap: wrap;
   }
   header .main-info .personal-info .main-buttons .primary-button, header .main-info .personal-info .main-buttons .secondary-button {
-    width: 170px;
-    height: 50px;
-    font-size: 15px;
+    width: 130px;
+    height: 40px;
+    font-size: 13px;
+    margin: 6px;
   }
-  header .main-info .portrait img {
+  header .main-info .portrait #portrait-id {
     width: 40vh;
+    margin-right: 0px;
   }
   header .background-shapes {
     height: 85vh;
   }
   header .background-shapes #circle-1, header .background-shapes #circle-2, header .background-shapes #circle-3 {
     display: none;
-  }
-  header .background-shapes #skill-wheel {
-    width: 600px;
-    right: -15%;
   }
   header .mouse-scroll {
     display: none;
@@ -903,10 +929,6 @@ a {
   }
   .project-card-container .project-info p {
     font-size: 1.9vw;
-  }
-
-  header .background-shapes #skill-wheel {
-    right: -10%;
   }
 }
 @media screen and (min-width: 650px) {
@@ -949,9 +971,6 @@ a {
 
   header {
     margin-top: 50px;
-  }
-  header .background-shapes #skill-wheel {
-    right: -3%;
   }
 
   .project-card-container {
@@ -1018,10 +1037,144 @@ a {
     font-size: 4vw;
   }
 }
-@media screen and (max-width: 580px) {
-  header .background-shapes #skill-wheel {
-    left: 0;
-    width: 500px;
+@media screen and (max-width: 510px) {
+  header .main-info .portrait #portrait-id {
+    max-width: 300px;
+  }
+  header .main-info .portrait #skill-wheel {
+    max-width: 400px;
+    transform: translateX(-40px) translateY(-60px);
+  }
+
+  h2 {
+    font-size: 6vw;
+  }
+
+  .about-me-background {
+    padding-top: 70px;
+  }
+  .about-me-background .introduction-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+  .about-me-background .introduction-wrapper .introduction h4 {
+    font-size: 3.5vw;
+  }
+  .about-me-background .introduction-wrapper .introduction p {
+    font-size: 3.2vw;
+    width: 100%;
+  }
+  .about-me-background .categories {
+    height: auto;
+  }
+  .about-me-background .categories .category-card {
+    width: 90%;
+    height: 180px;
+    padding: 6vw;
+    margin-bottom: 20px;
+  }
+  .about-me-background .categories .category-card .title {
+    font-size: 3.5vw;
+  }
+  .about-me-background .categories .category-card p {
+    font-size: 3.2vw;
+  }
+
+  .skills-section .skills-wrapper .heading-wrapper .green-circle-skills {
+    width: 100px;
+    height: 100px;
+    transform: translateX(1px) translateY(37px);
+  }
+  .skills-section .skills-wrapper .heading-wrapper .heading div {
+    width: 30px;
+    height: 15px;
+  }
+  .skills-section .skills-wrapper .heading-wrapper .heading div small {
+    font-size: 2vw;
+  }
+  .skills-section .skills-wrapper .heading-wrapper .heading h2 {
+    width: 70px;
+    height: 40px;
+  }
+  .skills-section .skills-wrapper .skill-container .skill-card-container {
+    width: 44%;
+  }
+  .skills-section .skills-wrapper .skill-container .skill-card-container img {
+    width: 80%;
+  }
+  .skills-section .skills-wrapper .skill-container .skill-card-container p {
+    font-size: 3.5vw;
+  }
+
+  .projects-section .project-wrapper .heading-wrapper-projects .green-circle-projects {
+    width: 100px;
+    height: 100px;
+    transform: translateX(1px) translateY(37px);
+  }
+  .projects-section .project-wrapper .heading-wrapper-projects .heading div {
+    width: 40px;
+    height: 15px;
+  }
+  .projects-section .project-wrapper .heading-wrapper-projects .heading div small {
+    font-size: 2vw;
+  }
+  .projects-section .project-wrapper .heading-wrapper-projects .heading h2 {
+    width: 90px;
+    height: 40px;
+  }
+  .projects-section .project-container .project-card-container {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+  }
+  .projects-section .project-container .project-card-container img {
+    max-width: 100%;
+  }
+  .projects-section .project-container .project-card-container .project-info h3 {
+    font-weight: 400;
+    font-size: 5vw;
+  }
+  .projects-section .project-container .project-card-container .project-info p {
+    max-width: 90%;
+    font-size: 3vw;
+    font-weight: 200;
+    letter-spacing: 0.7px;
+  }
+  .projects-section .project-container .project-card-container .project-info a p {
+    font-weight: 400;
+  }
+}
+@media screen and (max-width: 400px) {
+  header {
+    margin-top: 0px;
+    min-height: 100vh;
+  }
+  header .main-info .portrait {
+    margin-top: 0px;
+  }
+  header .main-info .portrait #skill-wheel {
+    max-width: 350px;
+    transform: translateX(-25px) translateY(-50px);
+  }
+  header .main-info .personal-info .info-wrapper .main-buttons {
+    margin-top: 20px;
+  }
+
+  .about-me-background {
+    padding-bottom: 40px;
+  }
+  .about-me-background .categories .category-card {
+    width: 90%;
+    height: 160px;
+    padding: 6vw;
+    margin-bottom: 20px;
+  }
+
+  .projects-section {
+    padding-top: 60px;
+    padding-bottom: 0px;
   }
 }
 
