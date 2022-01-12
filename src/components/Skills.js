@@ -37,6 +37,13 @@ export const Skills = () => {
                     <SkillCard vector={ Blender } alt="Blender logo" name="Blender" />
                 </div>
             </div>
+
+            <div className="skills-background-circles">    
+                <div id="circle-14"></div>
+                <div id="circle-15"></div>
+                <div id="circle-16"></div>
+                <div id="circle-17"></div>
+            </div>
         </section>
     )
 }

@@ -193,35 +193,35 @@ header
             height: 100px
             left: 103px
             top: -100px
-            animation: random-movement-2 2s ease alternate infinite
+            animation: random-movement-2 3s ease alternate infinite
 
         #circle-3
             width: 70px
             height: 70px
             left: 1730px
             top: 517px
-            animation: random-movement-3 2s ease alternate infinite
+            animation: random-movement-3 3s ease alternate infinite
 
         @keyframes random-movement-1 
             0% 
                 transform: translateY(0) translateX(0)
         
             100% 
-                transform: translateY(14px) translateX(14px)
+                transform: translateY(29px) translateX(29px)
 
         @keyframes random-movement-2
             0% 
                 transform: translateY(0) translateX(0)
         
             100% 
-                transform: translateY(14px) translateX(-10px)
+                transform: translateY(29px) translateX(-15px)
 
         @keyframes random-movement-3
             0% 
                 transform: translateY(0) translateX(0)
         
             100% 
-                transform: translateY(11px) translateX(5px)
+                transform: translateY(-25px) translateX(18px)
 
         #skill-wheel
             position: relative
@@ -234,6 +234,7 @@ header
         display: flex
         flex-direction: column
         position: absolute
+        bottom: 20px
 
         #mouse-arrow
             animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate-reverse both
@@ -332,24 +333,28 @@ header
         height: 70px
         left: 1630px
         top: 840px
+        animation: random-movement-1 2s ease alternate infinite
 
     #circle-5
         width: 100px
         height: 100px
         left: 1730px
         top: 140px
+        animation: random-movement-2 3s ease alternate infinite
 
     #circle-6
         width: 50px
         height: 50px
         left: 930px
         top: 610px
+        animation: random-movement-3 2s ease alternate infinite
 
     #circle-7
         width: 80px
         height: 80px
         left: 30px
         top: 0px
+        animation: random-movement-1 3s ease alternate-reverse infinite
 
 //******************************Skills Styling***************************************  
 .skills-section
@@ -402,6 +407,44 @@ header
                 border: 3px solid var(--green)
                 border-radius: 100%
                 transform: translateY(45px) translateX(-20px)
+
+    .skills-background-circles
+        position: absolute 
+        width: 100%
+        height: 100vh
+
+        #circle-14, #circle-15, #circle-16, #circle-17
+            position: relative
+            background-color: var(--dark-grey)
+            border-radius: 100%
+
+        #circle-14
+            width: 70px
+            height: 70px
+            left: 1600px
+            top: 0px
+            animation: random-movement-1 3s ease alternate infinite
+
+        #circle-15
+            width: 30px
+            height: 30px
+            left: 600px
+            top: 0px
+            animation: random-movement-2 3s ease alternate infinite
+
+        #circle-16
+            width: 130px
+            height: 130px
+            left: 1600px
+            top: 400px
+            animation: random-movement-3 3s ease alternate infinite
+
+        #circle-17
+            width: 110px
+            height: 110px
+            left: 200px
+            top: 300px
+            animation: random-movement-1 3s ease alternate-reverse infinite
 
 .skill-container
     width: 80vw
@@ -489,46 +532,57 @@ header
             justify-content: center
             flex-wrap: wrap
 
-    #circle-8, #circle-9, #circle-10, #circle-11, #circle-12, #circle-13
-        position: absolute
-        background-color: var(--grey)
-        border-radius: 100%
+    .background
+        position: absolute 
+        width: 100%
+        height: 100vh
 
-    #circle-8
-        width: 70px
-        height: 70px
-        left: 600px
-        top: -320px
+        #circle-8, #circle-9, #circle-10, #circle-11, #circle-12, #circle-13
+            position: relative
+            background-color: var(--grey)
+            border-radius: 100%
 
-    #circle-9
-        width: 30px
-        height: 30px
-        left: 800px
-        top: -800px
+        #circle-8
+            width: 70px
+            height: 70px
+            left: 1600px
+            top: 0px
+            animation: random-movement-1 3s ease alternate infinite
 
-    #circle-10
-        width: 130px
-        height: 130px
-        left: 700px
-        top: -300px
+        #circle-9
+            width: 30px
+            height: 30px
+            left: 600px
+            top: 0px
+            animation: random-movement-2 3s ease alternate infinite
 
-    #circle-11
-        width: 110px
-        height: 110px
-        left: -700px
-        top: -600px
+        #circle-10
+            width: 130px
+            height: 130px
+            left: 1600px
+            top: 500px
+            animation: random-movement-3 3s ease alternate infinite
 
-    #circle-12
-        width: 60px
-        height: 60px
-        left: -700px
-        top: -1000px
+        #circle-11
+            width: 110px
+            height: 110px
+            left: 0px
+            top: 500px
+            animation: random-movement-1 3s ease alternate-reverse infinite
 
-    #circle-13
-        width: 40px
-        height: 40px
-        left: 0px
-        top: -1300px
+        #circle-12
+            width: 60px
+            height: 60px
+            left: 900px
+            top: 300px
+            animation: random-movement-3 2s ease alternate-reverse infinite
+
+        #circle-13
+            width: 40px
+            height: 40px
+            left: 30px
+            top: -40px
+            animation: random-movement-3 3s ease alternate-reverse infinite
 
 .project-card-container
     display: flex
@@ -797,13 +851,7 @@ a
 
         .background-shapes
             height: 85vh
-            #circle-1
-                display: none
-
-            #circle-2
-                display: none 
-
-            #circle-3
+            #circle-1, #circle-2, #circle-3
                 display: none
 
             #skill-wheel
@@ -813,9 +861,14 @@ a
         .mouse-scroll
             display: none
 
+    .background
+        #circle-8, #circle-9, #circle-10, #circle-11, #circle-12, #circle-13
+            display: none
+
+    .skills-background-circles
+        #circle-14, #circle-15, #circle-16, #circle-17
+            display: none
     
-
-
 @media screen and (max-width: 800px)
     .project-card-container
         img 
@@ -910,9 +963,9 @@ a
                     letter-spacing: 1px
                     font-size: 13px
 
-.about-me-background-circles
-    #circle-4, #circle-5, #circle-6, #circle-7
-        display: none   
+    .about-me-background-circles
+        #circle-4, #circle-5, #circle-6, #circle-7
+            display: none   
 
 @media screen and (max-width: 600px)
     .categories

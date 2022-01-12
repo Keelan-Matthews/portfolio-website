@@ -205,21 +205,21 @@ header .background-shapes #circle-2 {
   height: 100px;
   left: 103px;
   top: -100px;
-  animation: random-movement-2 2s ease alternate infinite;
+  animation: random-movement-2 3s ease alternate infinite;
 }
 header .background-shapes #circle-3 {
   width: 70px;
   height: 70px;
   left: 1730px;
   top: 517px;
-  animation: random-movement-3 2s ease alternate infinite;
+  animation: random-movement-3 3s ease alternate infinite;
 }
 @keyframes random-movement-1 {
   0% {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(14px) translateX(14px);
+    transform: translateY(29px) translateX(29px);
   }
 }
 @keyframes random-movement-2 {
@@ -227,7 +227,7 @@ header .background-shapes #circle-3 {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(14px) translateX(-10px);
+    transform: translateY(29px) translateX(-15px);
   }
 }
 @keyframes random-movement-3 {
@@ -235,7 +235,7 @@ header .background-shapes #circle-3 {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(11px) translateX(5px);
+    transform: translateY(-25px) translateX(18px);
   }
 }
 header .background-shapes #skill-wheel {
@@ -249,6 +249,7 @@ header .mouse-scroll {
   display: flex;
   flex-direction: column;
   position: absolute;
+  bottom: 20px;
 }
 header .mouse-scroll #mouse-arrow {
   animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate-reverse both;
@@ -348,24 +349,28 @@ header .mouse-scroll #mouse-arrow {
   height: 70px;
   left: 1630px;
   top: 840px;
+  animation: random-movement-1 2s ease alternate infinite;
 }
 .about-me-background-circles #circle-5 {
   width: 100px;
   height: 100px;
   left: 1730px;
   top: 140px;
+  animation: random-movement-2 3s ease alternate infinite;
 }
 .about-me-background-circles #circle-6 {
   width: 50px;
   height: 50px;
   left: 930px;
   top: 610px;
+  animation: random-movement-3 2s ease alternate infinite;
 }
 .about-me-background-circles #circle-7 {
   width: 80px;
   height: 80px;
   left: 30px;
   top: 0px;
+  animation: random-movement-1 3s ease alternate-reverse infinite;
 }
 
 .skills-section {
@@ -418,6 +423,44 @@ header .mouse-scroll #mouse-arrow {
   border: 3px solid var(--green);
   border-radius: 100%;
   transform: translateY(45px) translateX(-20px);
+}
+.skills-section .skills-background-circles {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+.skills-section .skills-background-circles #circle-14, .skills-section .skills-background-circles #circle-15, .skills-section .skills-background-circles #circle-16, .skills-section .skills-background-circles #circle-17 {
+  position: relative;
+  background-color: var(--dark-grey);
+  border-radius: 100%;
+}
+.skills-section .skills-background-circles #circle-14 {
+  width: 70px;
+  height: 70px;
+  left: 1600px;
+  top: 0px;
+  animation: random-movement-1 3s ease alternate infinite;
+}
+.skills-section .skills-background-circles #circle-15 {
+  width: 30px;
+  height: 30px;
+  left: 600px;
+  top: 0px;
+  animation: random-movement-2 3s ease alternate infinite;
+}
+.skills-section .skills-background-circles #circle-16 {
+  width: 130px;
+  height: 130px;
+  left: 1600px;
+  top: 400px;
+  animation: random-movement-3 3s ease alternate infinite;
+}
+.skills-section .skills-background-circles #circle-17 {
+  width: 110px;
+  height: 110px;
+  left: 200px;
+  top: 300px;
+  animation: random-movement-1 3s ease alternate-reverse infinite;
 }
 
 .skill-container {
@@ -508,46 +551,57 @@ header .mouse-scroll #mouse-arrow {
   justify-content: center;
   flex-wrap: wrap;
 }
-.projects-section #circle-8, .projects-section #circle-9, .projects-section #circle-10, .projects-section #circle-11, .projects-section #circle-12, .projects-section #circle-13 {
+.projects-section .background {
   position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+.projects-section .background #circle-8, .projects-section .background #circle-9, .projects-section .background #circle-10, .projects-section .background #circle-11, .projects-section .background #circle-12, .projects-section .background #circle-13 {
+  position: relative;
   background-color: var(--grey);
   border-radius: 100%;
 }
-.projects-section #circle-8 {
+.projects-section .background #circle-8 {
   width: 70px;
   height: 70px;
-  left: 600px;
-  top: -320px;
+  left: 1600px;
+  top: 0px;
+  animation: random-movement-1 3s ease alternate infinite;
 }
-.projects-section #circle-9 {
+.projects-section .background #circle-9 {
   width: 30px;
   height: 30px;
-  left: 800px;
-  top: -800px;
+  left: 600px;
+  top: 0px;
+  animation: random-movement-2 3s ease alternate infinite;
 }
-.projects-section #circle-10 {
+.projects-section .background #circle-10 {
   width: 130px;
   height: 130px;
-  left: 700px;
-  top: -300px;
+  left: 1600px;
+  top: 500px;
+  animation: random-movement-3 3s ease alternate infinite;
 }
-.projects-section #circle-11 {
+.projects-section .background #circle-11 {
   width: 110px;
   height: 110px;
-  left: -700px;
-  top: -600px;
+  left: 0px;
+  top: 500px;
+  animation: random-movement-1 3s ease alternate-reverse infinite;
 }
-.projects-section #circle-12 {
+.projects-section .background #circle-12 {
   width: 60px;
   height: 60px;
-  left: -700px;
-  top: -1000px;
+  left: 900px;
+  top: 300px;
+  animation: random-movement-3 2s ease alternate-reverse infinite;
 }
-.projects-section #circle-13 {
+.projects-section .background #circle-13 {
   width: 40px;
   height: 40px;
-  left: 0px;
-  top: -1300px;
+  left: 30px;
+  top: -40px;
+  animation: random-movement-3 3s ease alternate-reverse infinite;
 }
 
 .project-card-container {
@@ -814,13 +868,7 @@ a {
   header .background-shapes {
     height: 85vh;
   }
-  header .background-shapes #circle-1 {
-    display: none;
-  }
-  header .background-shapes #circle-2 {
-    display: none;
-  }
-  header .background-shapes #circle-3 {
+  header .background-shapes #circle-1, header .background-shapes #circle-2, header .background-shapes #circle-3 {
     display: none;
   }
   header .background-shapes #skill-wheel {
@@ -828,6 +876,14 @@ a {
     right: -15%;
   }
   header .mouse-scroll {
+    display: none;
+  }
+
+  .background #circle-8, .background #circle-9, .background #circle-10, .background #circle-11, .background #circle-12, .background #circle-13 {
+    display: none;
+  }
+
+  .skills-background-circles #circle-14, .skills-background-circles #circle-15, .skills-background-circles #circle-16, .skills-background-circles #circle-17 {
     display: none;
   }
 }
@@ -929,11 +985,11 @@ a {
     letter-spacing: 1px;
     font-size: 13px;
   }
-}
-.about-me-background-circles #circle-4, .about-me-background-circles #circle-5, .about-me-background-circles #circle-6, .about-me-background-circles #circle-7 {
-  display: none;
-}
 
+  .about-me-background-circles #circle-4, .about-me-background-circles #circle-5, .about-me-background-circles #circle-6, .about-me-background-circles #circle-7 {
+    display: none;
+  }
+}
 @media screen and (max-width: 600px) {
   .categories .category-card {
     width: 80%;
