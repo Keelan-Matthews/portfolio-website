@@ -14,15 +14,14 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
   overflow-x: hidden;
+  position: absolute;
+  width: 100%;
 }
 
 main {
   background-color: var(--grey);
-  height: 100vh;
+  min-height: 100vh;
   color: white;
   font-family: montserrat;
   font-weight: regular;
@@ -39,6 +38,10 @@ h3 {
   font-family: poppins;
   font-weight: 300;
   letter-spacing: 0.8px;
+}
+
+.content-hide {
+  display: none;
 }
 
 .loader {

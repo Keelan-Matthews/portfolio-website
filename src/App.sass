@@ -13,10 +13,12 @@
 html 
     scroll-behavior: smooth 
     overflow-x: hidden
+    position: absolute
+    width: 100%
 
 main 
     background-color: var(--grey)
-    height: 100vh
+    min-height: 100vh
     color: white
     font-family: montserrat
     font-weight: regular
@@ -33,12 +35,15 @@ h3
     letter-spacing: 0.8px
 
 //******************************Preloader*********************************
-// .loader
-//     width: 100%
-//     height: 100vh
-//     display: flex 
-//     justify-content: center 
-//     align-items: center
+.content-hide
+    display: none
+
+.loader 
+    width: 100%
+    height: 100vh
+    display: flex 
+    justify-content: center 
+    align-items: center
 
 //****************************Page load animations*****************************************
 @keyframes slideInLeft

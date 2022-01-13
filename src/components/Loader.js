@@ -1,16 +1,13 @@
-// import React from 'react';
-// import { BoxesLoader } from "react-awesome-loaders";
+import React from 'react';
+import HashLoader from "react-spinners/HashLoader";
 
-// export const Loader = () => {
-//     return (
-//         <div className="loader">
-//            <BoxesLoader
-//                 boxColor={"#47D2A0"}
-//                 shadowColor={"#25262A"}
-//                 style={{ marginBottom: "20px" }}
-//                 desktopSize={"128px"}
-//                 mobileSize={"80px"}
-//             /> 
-//         </div>
-//     )
-// }
+export const Loader = () => {
+    return (
+        <div className="loader">
+            <HashLoader 
+                size={80}
+                color={"#47D2A0"}
+            />
+        </div>
+    )
+}
