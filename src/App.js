@@ -30,16 +30,13 @@ function App() {
       <div className={loading ? "" : "content-hide"}>
         <Loader />
       </div>
-      
-      <div className={loading ? "content-hide" : "" }>
-        <NavBar />
-        <Header />
-        <AboutMe />
-        <Skills />
-        <Projects />
-        <Contact />
-        <Footer />
-      </div>
+      <NavBar />
+      <Header />
+      <AboutMe />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
     </main>
   );
 }

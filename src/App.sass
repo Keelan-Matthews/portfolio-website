@@ -44,6 +44,9 @@ h3
     display: flex 
     justify-content: center 
     align-items: center
+    position: fixed
+    background-color: var(--dark-grey)
+    z-index: 10001
 
 //****************************Page load animations*****************************************
 @keyframes slideInLeft
@@ -52,7 +55,8 @@ h3
         
     100%
         transform: translateX(0) 
-        
+
+//****************************Page load animations*****************************************       
 
 //****************************Navigation bar styling*****************************************
 .nav-bar
@@ -122,6 +126,7 @@ header
     align-items: flex-end
     justify-content: center
     margin-top: 100px
+    position: relative
     
     .personal-info
         margin-top: 250px
@@ -312,6 +317,37 @@ header
 
 
 //****************************About Me Styling*******************************************
+@keyframes slideInFromLeft-1
+    0% 
+        transform: translateX(-100%)
+        opacity: 0
+  
+    100% 
+        transform: translateX(0)
+        opacity: 1
+
+@keyframes slideInFromRight
+    0% 
+        transform: translateX(100%)
+        opacity: 0
+  
+    100% 
+        transform: translateX(0)
+        opacity: 1
+
+@keyframes slideInFromLeft-3
+    0% 
+        transform: translateX(-100%)
+        opacity: 0
+
+    66%
+        transform: translateX(-100%)
+        opacity: 0
+  
+    100% 
+        transform: translateX(0)
+        opacity: 1
+
 .about-me-background
     background-color: var(--dark-grey)   
     min-height: 100vh  
@@ -328,6 +364,27 @@ header
     justify-content: space-between
     margin-right: 300px
     z-index: 2
+    .card-exit-animation-1
+        animation: 1s ease-out 0s 1 reverse forwards slideInFromLeft-3
+
+    .card-exit-animation-2
+        animation: 0.7s ease-out 0s 1 reverse forwards slideInFromLeft-3
+
+    .card-exit-animation-3
+        animation: 0.5s ease-out 0s 1 reverse forwards slideInFromLeft-3
+
+    .card-animation-1
+        animation: 0.5s ease-out 0s 1 slideInFromLeft-1
+        visibility: visible !important
+
+    .card-animation-2
+        animation: 0.7s ease-out 0s 1 slideInFromLeft-1
+        visibility: visible !important
+
+    .card-animation-3
+        animation: 0.8s ease-out 0s 1 slideInFromLeft-1
+        visibility: visible !important
+
     .category-card
         width: 500px
         height: 200px  
@@ -347,7 +404,7 @@ header
             font-size: 15px
             letter-spacing: 0.5px
             line-height: 23px
-            font-weight: 200
+            font-weight: 300
 
         &:hover
             .title
@@ -355,6 +412,12 @@ header
 
             transform: scale(1.04)
 
+.introduction-animation 
+    animation: 0.5s ease-out 0s 1 slideInFromRight
+    visibility: visible !important
+
+.introduction-display-none
+    display: none
 
 .introduction
     div
@@ -376,7 +439,7 @@ header
         margin-top: 25px
 
     p 
-        font-weight: 200
+        font-weight: 300
         letter-spacing: 0.5px
         line-height: 23px
         width: 500px
@@ -786,6 +849,10 @@ a
             #skill-wheel
                  width: 700px
 
+    //Hide background circles
+    #circle-3, #circle-4, #circle-5, #circle-14, #circle-16, #circle-8, #circle-10
+        display: none
+
 @media screen and (max-width: 1400px)
     header 
         min-height: 700px
@@ -954,6 +1021,9 @@ a
 
             p
                 font-size: 1.9vw
+
+    #circle-7
+        display: none
 
 @media screen and (min-width: 650px)
     .menu-icon
