@@ -595,6 +595,7 @@ header .mouse-scroll #mouse-arrow {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 50px;
 }
 
 .skill-card-container {
