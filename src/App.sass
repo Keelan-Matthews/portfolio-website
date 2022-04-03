@@ -84,10 +84,12 @@ h3
         &:hover 
             a
                 color: var(--green)
+                transform: translateY(-6px)
 
         a
             text-decoration: none
-            color: white             
+            color: white   
+            transition: 0.5s ease          
 
     .navigation
         display: flex
@@ -114,6 +116,10 @@ h3
     justify-content: center
     align-items: center
     font-size: 24px
+
+    &:hover
+        color: white !important
+
 
 .menu-icon
     font-size: 40px
@@ -214,6 +220,21 @@ header
                         box-shadow: 1px -1px 10px 0px #d4d4d48a
                         border: 3px solid var(--green)
 
+        .my-stats
+            display: flex
+            justify-content: space-between
+            padding: 100px 200px 100px 0
+
+            div
+                text-align: center
+
+            h3
+                font-size: 40px
+                font-weight: bold
+                opacity: 0.6
+
+            p
+                opacity: 0.6
     .portrait
         margin-top: 94px
         display: grid
@@ -401,7 +422,7 @@ header
             margin-bottom: 30px
 
         p 
-            font-size: 15px
+            font-size: 16px
             letter-spacing: 0.5px
             line-height: 23px
             font-weight: 300
@@ -440,10 +461,10 @@ header
 
     p 
         font-weight: 300
-        letter-spacing: 0.5px
-        line-height: 23px
-        width: 500px
-        font-size: 15px
+        letter-spacing: 0.7px
+        line-height: 25px
+        width: 550px
+        font-size: 18px
 
 .about-me-background-circles
     position: absolute 
@@ -723,12 +744,17 @@ header
     margin: 20px
     border-radius: 10px
     box-shadow: 1px -1px 30px 0px rgba(0,0,0,0.24)
-    transition: transform 0.3s ease
+    transition: 0.3s ease
     z-index: 10
+
+    a
+        transition: 0.3s ease
 
     &:hover
         transform: scale(1.006)
-        border: 2px solid var(--green)
+
+        a
+            transform: scale(1.1) translateX(100px)
 
     img
         max-width: 450px
@@ -944,6 +970,7 @@ a
             p
                 display: none
 
+
 @media screen and (max-width: 883px) //Convert to mobile, portrait
     header 
         max-height: 100vh
@@ -983,6 +1010,14 @@ a
                         height: 40px
                         font-size: 13px
                         margin: 6px
+
+                .my-stats
+                    padding: 40px
+
+                    h3
+                        font-size: 25px
+                    p
+                        font-size: 15px
 
             .portrait
                 #portrait-id
@@ -1133,7 +1168,7 @@ a
 
                 #skill-wheel
                     max-width: 400px
-                    transform: translateX(-40px) translateY(-60px)
+                    transform: translateX(-45px) translateY(-60px)
 
     h2 
         font-size: 6vw
@@ -1151,7 +1186,7 @@ a
                     font-size: 3.5vw
 
                 p 
-                    font-size: 3.2vw
+                    font-size: 3.7vw
                     width: 100%
 
         .categories

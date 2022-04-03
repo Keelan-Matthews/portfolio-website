@@ -26,6 +26,20 @@ export const Header = () => {
                             <a href={ CV } download="Keelan Matthews CV" className="primary-button"><div>Download CV</div></a>
                             <a href="mailto:keelanmatthews123@gmail.com" target="_blank" className="secondary-button"><div>Contact Me</div></a>
                         </div>
+                        <div className="my-stats">
+                            <div>
+                                <h3>3K</h3>
+                                <p>hours</p>
+                            </div>
+                            <div>
+                                <h3>5+</h3>
+                                <p>years</p>
+                            </div>
+                            <div>
+                                <h3>15+</h3>
+                                <p>skills</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="portrait-container">
