@@ -1,9 +1,9 @@
 @import url("https://use.typekit.net/aqu0iax.css");
 :root {
-  --grey: #2D2E32;
-  --dark-grey: #25262A;
-  --darkest-grey: #1F2024;
-  --green: #47D2A0;
+  --grey: #2d2e32;
+  --dark-grey: #25262a;
+  --darkest-grey: #1f2024;
+  --green: #47d2a0;
 }
 
 * {
@@ -279,7 +279,9 @@ header .background-shapes {
   width: 100%;
   height: 100vh;
 }
-header .background-shapes #circle-1, header .background-shapes #circle-2, header .background-shapes #circle-3 {
+header .background-shapes #circle-1,
+header .background-shapes #circle-2,
+header .background-shapes #circle-3 {
   position: relative;
   background-color: var(--dark-grey);
   border-radius: 100%;
@@ -336,7 +338,8 @@ header .mouse-scroll {
   bottom: 20px;
 }
 header .mouse-scroll #mouse-arrow {
-  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate-reverse both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+    alternate-reverse both;
 }
 
 @keyframes slide-top {
@@ -487,7 +490,10 @@ header .mouse-scroll #mouse-arrow {
   width: 100%;
   height: 100vh;
 }
-.about-me-background-circles #circle-4, .about-me-background-circles #circle-5, .about-me-background-circles #circle-6, .about-me-background-circles #circle-7 {
+.about-me-background-circles #circle-4,
+.about-me-background-circles #circle-5,
+.about-me-background-circles #circle-6,
+.about-me-background-circles #circle-7 {
   position: relative;
   background-color: var(--grey);
   border-radius: 100%;
@@ -577,7 +583,10 @@ header .mouse-scroll #mouse-arrow {
   width: 100%;
   height: 100vh;
 }
-.skills-section .skills-background-circles #circle-14, .skills-section .skills-background-circles #circle-15, .skills-section .skills-background-circles #circle-16, .skills-section .skills-background-circles #circle-17 {
+.skills-section .skills-background-circles #circle-14,
+.skills-section .skills-background-circles #circle-15,
+.skills-section .skills-background-circles #circle-16,
+.skills-section .skills-background-circles #circle-17 {
   position: relative;
   background-color: var(--dark-grey);
   border-radius: 100%;
@@ -681,10 +690,18 @@ header .mouse-scroll #mouse-arrow {
   align-items: center;
   border-radius: 3px;
 }
-.projects-section .project-wrapper .heading-wrapper-projects .heading div small {
+.projects-section
+  .project-wrapper
+  .heading-wrapper-projects
+  .heading
+  div
+  small {
   font-size: 10px;
 }
-.projects-section .project-wrapper .heading-wrapper-projects .green-circle-projects {
+.projects-section
+  .project-wrapper
+  .heading-wrapper-projects
+  .green-circle-projects {
   position: absolute;
   grid-row: 1;
   grid-column: 1;
@@ -706,7 +723,12 @@ header .mouse-scroll #mouse-arrow {
   width: 100%;
   height: 100vh;
 }
-.projects-section .background #circle-8, .projects-section .background #circle-9, .projects-section .background #circle-10, .projects-section .background #circle-11, .projects-section .background #circle-12, .projects-section .background #circle-13 {
+.projects-section .background #circle-8,
+.projects-section .background #circle-9,
+.projects-section .background #circle-10,
+.projects-section .background #circle-11,
+.projects-section .background #circle-12,
+.projects-section .background #circle-13 {
   position: relative;
   background-color: var(--grey);
   border-radius: 100%;
@@ -840,7 +862,8 @@ a {
   box-shadow: 1px -1px 20px 0px rgba(0, 0, 0, 0.54);
 }
 .contact-section div:hover {
-  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) infinite alternate both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) infinite
+    alternate both;
 }
 @keyframes scale-up-center {
   0% {
@@ -892,7 +915,13 @@ a {
     width: 700px;
   }
 
-  #circle-3, #circle-4, #circle-5, #circle-14, #circle-16, #circle-8, #circle-10 {
+  #circle-3,
+  #circle-4,
+  #circle-5,
+  #circle-14,
+  #circle-16,
+  #circle-8,
+  #circle-10 {
     display: none;
   }
 }
@@ -941,7 +970,8 @@ a {
   header .main-info .personal-info .main-buttons {
     width: 270px;
   }
-  header .main-info .personal-info .main-buttons .primary-button, header .main-info .personal-info .main-buttons .secondary-button {
+  header .main-info .personal-info .main-buttons .primary-button,
+  header .main-info .personal-info .main-buttons .secondary-button {
     width: 130px;
     height: 49px;
     font-size: 13px;
@@ -1025,7 +1055,8 @@ a {
     justify-content: center;
     margin-top: 40px;
   }
-  header .main-info .personal-info .main-buttons .primary-button, header .main-info .personal-info .main-buttons .secondary-button {
+  header .main-info .personal-info .main-buttons .primary-button,
+  header .main-info .personal-info .main-buttons .secondary-button {
     width: 130px;
     height: 40px;
     font-size: 13px;
@@ -1047,18 +1078,28 @@ a {
   header .background-shapes {
     height: 85vh;
   }
-  header .background-shapes #circle-1, header .background-shapes #circle-2, header .background-shapes #circle-3 {
+  header .background-shapes #circle-1,
+  header .background-shapes #circle-2,
+  header .background-shapes #circle-3 {
     display: none;
   }
   header .mouse-scroll {
     display: none;
   }
 
-  .background #circle-8, .background #circle-9, .background #circle-10, .background #circle-11, .background #circle-12, .background #circle-13 {
+  .background #circle-8,
+  .background #circle-9,
+  .background #circle-10,
+  .background #circle-11,
+  .background #circle-12,
+  .background #circle-13 {
     display: none;
   }
 
-  .skills-background-circles #circle-14, .skills-background-circles #circle-15, .skills-background-circles #circle-16, .skills-background-circles #circle-17 {
+  .skills-background-circles #circle-14,
+  .skills-background-circles #circle-15,
+  .skills-background-circles #circle-16,
+  .skills-background-circles #circle-17 {
     display: none;
   }
 }
@@ -1158,7 +1199,10 @@ a {
     font-size: 13px;
   }
 
-  .about-me-background-circles #circle-4, .about-me-background-circles #circle-5, .about-me-background-circles #circle-6, .about-me-background-circles #circle-7 {
+  .about-me-background-circles #circle-4,
+  .about-me-background-circles #circle-5,
+  .about-me-background-circles #circle-6,
+  .about-me-background-circles #circle-7 {
     display: none;
   }
 }
@@ -1261,7 +1305,10 @@ a {
     font-size: 3.5vw;
   }
 
-  .projects-section .project-wrapper .heading-wrapper-projects .green-circle-projects {
+  .projects-section
+    .project-wrapper
+    .heading-wrapper-projects
+    .green-circle-projects {
     width: 100px;
     height: 100px;
     transform: translateX(1px) translateY(37px);
@@ -1270,7 +1317,12 @@ a {
     width: 40px;
     height: 15px;
   }
-  .projects-section .project-wrapper .heading-wrapper-projects .heading div small {
+  .projects-section
+    .project-wrapper
+    .heading-wrapper-projects
+    .heading
+    div
+    small {
     font-size: 2vw;
   }
   .projects-section .project-wrapper .heading-wrapper-projects .heading h2 {
@@ -1285,7 +1337,11 @@ a {
   .projects-section .project-container .project-card-container img {
     max-width: 100%;
   }
-  .projects-section .project-container .project-card-container .project-info h3 {
+  .projects-section
+    .project-container
+    .project-card-container
+    .project-info
+    h3 {
     font-weight: 400;
     font-size: 5vw;
   }
@@ -1295,7 +1351,12 @@ a {
     font-weight: 200;
     letter-spacing: 0.7px;
   }
-  .projects-section .project-container .project-card-container .project-info a p {
+  .projects-section
+    .project-container
+    .project-card-container
+    .project-info
+    a
+    p {
     font-weight: 400;
   }
 }
